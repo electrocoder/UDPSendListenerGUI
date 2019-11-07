@@ -174,21 +174,21 @@ class Window(Frame):
         msg = self.send1_entry.get()
         if msg:
             self.sent_text.insert(END, msg)
-            self.sock_client.sendto(bytes(msg, encoding='utf-8'), (
+            self.sock_server.sendto(bytes(msg, encoding='utf-8'), (
             bytes(self.client_ip_entry.get(), encoding='utf-8'), int(self.client_port_entry.get())))
 
     def send_2(self):
         msg = self.send2_entry.get()
         if msg:
             self.sent_text.insert(END, msg)
-            self.sock_client.sendto(bytes(msg, encoding='utf-8'), (
+            self.sock_server.sendto(bytes(msg, encoding='utf-8'), (
             bytes(self.client_ip_entry.get(), encoding='utf-8'), int(self.client_port_entry.get())))
 
     def send_3(self):
         msg = self.send3_entry.get()
         if msg:
             self.sent_text.insert(END, msg)
-            self.sock_client.sendto(bytes(msg, encoding='utf-8'), (
+            self.sock_server.sendto(bytes(msg, encoding='utf-8'), (
             bytes(self.client_ip_entry.get(), encoding='utf-8'), int(self.client_port_entry.get())))
 
     def on_closing(self):
